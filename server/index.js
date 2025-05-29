@@ -9,6 +9,7 @@ const { oauth2Client } = require('./utils/googleCalender');
 const router = express.Router();
 const authRoutes = require('./routes/auth');
 app.use('/', authRoutes);
+app.use('/auth', require('./routes/auth'));
 
 
 router.get('/oauth2callback', async (req, res) => {
